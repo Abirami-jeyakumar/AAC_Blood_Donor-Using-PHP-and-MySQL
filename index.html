@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSS Blood Donation - Arul Anandar College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+
+    <style>
+.navbar-dark .navbar-nav .nav-link {
+    color: white; /* Set link text color to white */
+    font-weight: bold; /* Optional: make the links bold for better visibility */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #dcdcdc; /* Optional: add a light gray hover effect */
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color to golden yellow on hover */
+}
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            margin-bottom: 1rem;
+          
+        }
+        .btn-custom {
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            width: 250px;
+            text-align: center;
+            color: white;
+            border: none;
+        }
+        .btn-register {
+            background-color: blue;
+        }
+        .btn-login {
+            background-color: #007bff;
+        }
+        .btn-custom:hover {
+            opacity: 0.9;
+        }
+        .image {
+    display: block;
+    max-width: 90%; /* Adjust the max width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% */
+}
+
+.card-wrapper {
+    max-width: 300px; /* Adjust the card width */
+    margin: 0 auto; /* Center the card within its column */
+}
+
+.card-inner {
+    height: 400px; /* Adjust the card height */
+    border-radius: 10px; /* Optional: add rounded corners */
+    overflow: hidden; /* Ensure content stays within the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.grid {
+    row-gap: 20px; /* Vertical spacing between rows */
+    column-gap: 20px; /* Horizontal spacing between columns */
+}
+
+.btn-register {
+    background-color:#1E90FF;
+}
+
+.btn-register :hover{
+    background-color:#4169E1;
+}
+.btn-login {
+    background-color: #1E90FF; /* Teal for Admin Login */
+}
+
+.btn-custom:hover {
+    background-color: #87CEFA; /* Subtle hover effect */
+}
+
+/* General styling for the NSS section */
+.content {
+    background-color: #ffffff; /* White background for a clean look */
+    padding: 30px;
+    border-radius: 12px; /* More rounded edges */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    margin-bottom: 30px; /* Space below the section */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem; /* Increased title size for prominence */
+    font-weight: 600; /* Semi-bold weight */
+    color: #2980b9; /* Softer blue color for the title */
+    text-transform: uppercase;
+    border-bottom: 3px solid #3498db; /* Highlight line */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Subheadings */
+h4 {
+    font-size: 1.75rem; /* Larger subheading size */
+    font-weight: 500; /* Medium weight */
+    margin-top: 25px;
+    color: #2c3e50; /* Darker color for contrast */
+    text-transform: capitalize;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1rem; /* Slightly larger paragraph text */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 15px;
+    color: #444; /* Dark gray for better contrast */
+    font-size:larger;
+    
+
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px; /* Indent for the list */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 1.1rem; /* Larger list items */
+    line-height: 1.6; /* Improved line height */
+    margin-bottom: 8px;
+    position: relative; /* For custom bullet styling */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px; /* Slightly less padding on small screens */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Reduced title size on small screens */
+    }
+
+    h4 {
+        font-size: 1.5rem; /* Reduced subheading size */
+    }
+
+    
+}
+
+.logo {
+    max-height: 100px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional spacing */
+}
+
+.content {
+    background-color: rgb(235, 233, 233);
+    text-align: justify;
+}
+footer{
+  color:white;
+}
+    </style>
+</head>
+<body class="app">
+
+    <!-- Main Navigation -->
+    <nav class="nav navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+        <a class="logo navbar-brand" href="#">AAC Blood Donar Application</a>
+            <button class="toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="menu collapse navbar-collapse" id="navbarNav">
+                <ul class="list navbar-nav ms-auto">
+                    <li class="item nav-item">
+                        <a class="link nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="item nav-item">
+                        <a class="link nav-link" href="http://localhost/nss/public/student_register.php">Registration</a>
+                    </li>
+                    <li class="item nav-item">
+                        <a class="link nav-link" href="http://localhost/nss/public/login.php">Admin Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Page Header -->
+<header class="header text-center py-5 bg-primary text-white">
+  <div class="container d-flex align-items-center justify-content-center gap-3">
+      <img src="img/aac.png" alt="AAC Logo" class="Aaclogo" style="max-height: 100px;">
+      <div>
+          <h2 class="title display-4 mb-0">Arul Anandar College</h2>
+          <h3 class="subtitle h3 mt-2">NSS Blood Donor Application</h3>
+      </div>
+  </div>
+</header>
+
+
+    <!-- Welcome Section -->
+    <div class="container text-center my-5">
+    <marquee scrollamount="10" ><h2 class="header display-4 text-primary">Welcome to the Blood Donor Application</h2></marquee>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="http://localhost/nss/public/student_register.php" class="btn btn-custom btn-register">Register as a Student</a>
+            <a href="http://localhost/nss/public/login.php" class="btn btn-custom btn-login">Admin Login</a>
+        </div>
+    </div>
+
+    <!-- NSS Information Section -->
+<section class="content container my-5">
+    <center><h4 class="section-title text-center mb-4">About the National Service Scheme (NSS)</h4></center>
+    
+    
+    <!-- Faith Section -->
+    <h4 class="text-primary">Faith</h4>
+    <p>
+        When you give people a share of responsibility in sharpening their lives you increase their self-confidence, without which they are nothing. When they have faith in themselves, they are prepared to take on even the most difficult problems and solve them. And in order to generate that faith, we must first demonstrate that we have faith in the ability of the people to undertake nation-building activities. Faith begets faith and democracy can grow only when the people, particularly those who belong to the lowest strata of society, accept it fully.
+    </p>
+
+    <!-- Brief History Section -->
+    <h4 class="text-primary">Brief History</h4>
+    <p>
+        Ever since independence, there has been growing awareness of the desirability of involving students in national service. The First Education Commission (1950) recommended the introduction of national service by students on a voluntary basis. Subsequently, on the basis of a suggestion made by the then Prime Minister Pt. Nehru, a committee was appointed under the chairmanship of Dr. C. D. Deshmukh to prepare a scheme for compulsory national service by students prior to their admission for degree courses. Prof. K. G. Saiyidain, who undertook a study of national service by youth in several countries, recommended that national service may be introduced on a voluntary basis. A similar recommendation was made by the Education Commission appointed under the Chairmanship of Dr. D. S. Kothari.
+    </p>
+    <p>
+        In April 1967, the Conference of State Education Ministers recommended that at the University stage, students could be permitted to join the National Cadet Corps, which was already in existence on a voluntary basis, and an alternative to this could be offered to them in the form of a new programme called the National Service Scheme (NSS). Promising sportsmen, however, should be exempted from both and allowed to join another scheme called the National Sports Organisation (NSO), in view of the need to give priority to the development of sports and athletics.
+    </p>
+    <p>
+        The conference of Vice-Chancellors in September 1967 welcomed this recommendation and suggested that a special committee of Vice-Chancellors should be set up to examine this question in detail. The details were soon worked out, and the planning commission sanctioned an outlay of Rs. 5 crore for developing the NSS during the 4th Five Year Plan as a pilot project in selected institutions and universities. In pursuance of these recommendations, the Ministry of Education introduced the National Service Scheme during 1969-70. The choice of the timing of its introduction was remarkably auspicious, as 1969 was the birth centenary year of Mahatma Gandhi, the father of the nation, to whom social service was almost a religion.
+    </p>
+
+    <!-- Motto Section -->
+    <h4 class="text-primary">The Motto</h4>
+    <p>
+        The motto or watchword of the National Service Scheme is "NOT ME BUT YOU." This expresses the essence of democratic living and upholds the need for selfless service and appreciation of another person's point of view and consideration for fellow human beings. It illustrates that the welfare of an individual is ultimately dependent on the welfare of society as a whole. Therefore, it is the aim of the NSS to demonstrate its motto in its day-to-day programme.
+    </p>
+
+    <!-- Emblem Section -->
+    <h4 class="text-primary">The Emblem</h4>
+    <p>
+        The symbol of the National Service Scheme, as appearing on the cover, is based on the "Rath" wheel of the Konark Sun Temple of Orissa. These giant wheels of the Sun Temple portray the cycle of creation, preservation, and release and signify the movement in life across time and space. The wheel signifies the progressive cycle of life. It stands for continuity as well as change and implies on the part of the NSS for continuous striving forward for social transformation and upliftment.
+    </p>
+
+    <!-- Badge Section -->
+    <h4 class="text-primary">The Badge</h4>
+    <p>
+        The NSS Symbol is embossed on the NSS Badge. NSS volunteers wear it while undertaking various community programmes of community service. There are 24 wheels in the "Rath" of Sun Temple of Konark. Each wheel has eight bars, which represent 8 pahars of the day. Hence, the badge reminds the wearer to be in readiness for service of the nation round the clock, i.e., lively, active, and spirited. The NAVY BLUE colour indicates the cosmos of which the NSS is a tiny part ready to contribute its share for the welfare of mankind.
+    </p>
+
+    <!-- Vision and Mission Section -->
+    <h4 class="text-primary">Vision</h4>
+    <p>
+        Integral Development of Rural Students and Empowering them for Social Transformation.
+    </p>
+    <h4 class="text-primary">Mission</h4>
+    <p>
+        To make students agents of social change through imparting skills in research and social analysis.
+    </p>
+
+    <!-- Aim Section -->
+    <h4 class="text-primary">Aim</h4>
+    <p>
+        Development of the personality of students through community service.
+    </p>
+
+    <!-- Objectives Section -->
+    <h4 class="text-primary">Objectives</h4>
+    <ul>
+        <li>To work with/among people.</li>
+        <li>To engage in creative and constructive social action.</li>
+        <li>To enhance his/her knowledge of himself/herself and the community.</li>
+        <li>To put his/her scholarship to practical use in mitigating at least some of the problems.</li>
+        <li>To gain skill in the exercise of democratic leadership.</li>
+        <li>To gain skills in programme development to enable him/her for self-employment.</li>
+        <li>To promote the will to serve the weaker section of the community.</li>
+    </ul>
+</section>
+
+
+    <!-- Coordinators Section -->
+    <main class="content container my-5">
+        <center><h3 class="section-title text-center mb-4">Our NSS Coordinators</h3><br></center><br>
+        
+        <div class="grid row g-4">
+            <!-- Coordinator Card 1 -->
+            <div class="card-wrapper col-md-4 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/abirami.jpeg" class="image card-img-top" alt="Dr.Abirami S">
+                    <div class="body card-body">
+                    <center><h5 class="name card-title">Dr.Abirami S(UNIT 70)</h5></center>
+                    <center> <p class="role card-text">Programme Officer & Coordinator</p></center>
+                    </div>
+                </div>
+            </div>
+            <!-- Coordinator Card 2 -->
+            <div class="card-wrapper col-md-4 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/raj.jpeg" class="image card-img-top" alt="Dr.Raj C S A">
+                    <div class="body card-body">
+                    <center><h5 class="name card-title">Dr.Raj C S A(UNIT 71)</h5></center>
+                    <center><p class="role card-text">Programme Officer</p></center>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Coordinator Card 3 -->
+             <div class="card-wrapper col-md-4 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/nan.jpeg" class="image card-img-top" alt="Dr.Nanda Kumar E">
+                    <div class="body card-body">
+                    <center><h5 class="name card-title">Dr.Nanda Kumar E(UNIT 72)</h5></center>
+                    <center>   <p class="role card-text">Programme Officer</p></center>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Coordinator Card 4 -->
+             <div class="card-wrapper col-md-4 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/ram.jpeg" class="image card-img-center" alt="Dr.Ramachandran P">
+                    <div class="body card-body">
+                        <center><h5 class="name card-title">Dr.Ramachandran P(UNIT 73)</h5></center>
+                        <center><p class="role card-text">Programme Officer</p></center>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Coordinator Card 5 -->
+             <div class="card-wrapper col-md-3 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/juliet.jpeg" class="image card-img-center" alt="Ms.Juliet Shanthi I">
+                    <div class="body card-body">
+                       <center> <h5 class="name card-title">Ms.Juliet Shanthi I(UNIT 74)</h5></center>
+                       <center> <p class="role card-text">Programme Officer</p></center>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Coordinator Card 6-->
+             <div class="card-wrapper col-md-4 col-sm-6">
+                <div class="card-inner card h-100">
+                    <img src="img/kat.jpg" class="image card-img-top" alt="Dr.Kathiresan K">
+                    <div class="body card-body">
+                       <center> <h5 class="name card-title">Dr.Kathiresan K(UNIT 201)</h5></center>
+                       <center><p class="role card-text">Programme Officer</p></center> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+      <p class="mb-0" style="color: white;">© 2024 Arul Anandar College - NSS Blood Donor Application. All Rights Reserved.</p>
+      <p class="mb-0" style="color: white;">Designed by <strong>ABIRAMI(22csc103)</strong>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+  </body>
+</html>
